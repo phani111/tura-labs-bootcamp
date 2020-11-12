@@ -7,7 +7,7 @@ logging:
 defaults:
   ch1:
     ep5:
-      engine_file: ./deb/deb/data/input/ch1/ep5/ENGINE.txt
+      engine_file: ./data/input/ch1/ep5/ENGINE.txt
       aircraft_file: ./data/input/ch1/ep5/ACFTREF.txt
       master_file: ./data/input/ch1/ep5/MASTER.txt
       output_file: ./data/output/aircraft.parquet
@@ -17,7 +17,7 @@ defaults:
     # chapter 2 episode 3 defaults args
     ep3:
       input: 'gs://deb.gcs.turalabs.com/bots/csv/2018/flights_2018_01.csv'    # NOTE: change input to your own bucket location
-      output: 'gs://<YOUR-BUCKET>/beam/ch2cp3/'     # NOTE: change output location to your own bucket
+      output: 'gs://deb-airline-data-jsonp/beam/ch2cp3/'     # NOTE: change output location to your own bucket
       flights_ext_table: 'deb.tmp_flights'
       flights_table: 'deb.flights'
       routes_table: 'deb.routes'
@@ -31,7 +31,7 @@ defaults:
       api_timeout: 10.0
       api_max_retries: 3
       gcp_proect: 'deb'
-      output: 'gs://<YOUR-BUCKET>/beam/ch2cp5/'     # change to your own bucket name
+      output: 'gs://deb-airline-data-jsonp/beam/ch2cp5/'     # change to your own bucket name
       flights_ext_table: 'deb.tmp_flights'
       flights_table: 'deb.flights'
       routes_table: 'deb.routes'
